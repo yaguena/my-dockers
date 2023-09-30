@@ -1,0 +1,24 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/products/"
+    },
+    "response": {
+        "status": 200,
+		"jsonBody": [
+		{
+			"sku": "67687rew",
+			"product_name": "Blusa Listrada",
+			"price": 213.00
+		},
+		{
+			"sku": "FF7687rew",
+			"product_name": "Blusa Amarela",
+			"price": 233.00
+		}],
+        "headers": {
+			"Content-Type": "application/json"
+        }
+    }
+}
+

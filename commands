@@ -1,0 +1,10 @@
+docker network create -d bridge docker-network
+docker volume create mysql_volume
+docker run --name mysql-server -v mysql_volume:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=Brasil04 -p 3306:3306 -d mysql
+
+docker volume create jenkins_home
+
+docker run --name jenkins-server -p 8181:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11
+
+
+docker run --name wiremock-server -v $PWD:/home/wiremock -p 8182:8080 -d wiremock-custom
